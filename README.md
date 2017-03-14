@@ -54,8 +54,11 @@ packets to the attacker's system. This process kicks out the attacker from the n
 
 How to use - 
 
-bash ./shARP.sh -r [interface] to reset the network card and driver
-bash ./shARP.sh -d [interface] to activate the program in defense mode
-bash ./shARP.sh -o [interface] to activate the program in offense mode 
-bash ./shARP.sh -h             for help
+bash ./shARP.sh -r [interface] to reset the network card and driver.
+
+bash ./shARP.sh -d [interface] to activate the program in defense mode.
+
+bash ./shARP.sh -o [interface] to activate the program in offense mode.
+
+bash ./shARP.sh -h             for help.
 
