@@ -27,7 +27,7 @@ Description-
  
 ARP spoofing allows an attacker to intercept data frames on a network, modify the traffic, or stop all traffic. Often the attack is used as an
 opening for other attacks, such as denial of service, man in the middle, or session hijacking attacks.Our anti- ARP spoofing program,
-(ShARP) detects the presence of a third party in a private network actively. It has 2 mode: defensive and offensive.
+(shARP) detects the presence of a third party in a private network actively. It has 2 mode: defensive and offensive.
 Defensive mode protects the end user from the spoofer by dissconnecting the user's system from the network and alerts the
 user by an audio message. 
 The offensive mode dissconnects the user's system from the network and further kicks out the attacker by sending de-authentication packets to his
@@ -37,7 +37,7 @@ the attack. We can identify the NIC of the attackers system with the help of the
 attacker can be permanently banned from the netwrk by feeding his mac address to the block list of the router.
 The whole program is designed specially for linux and is writen in Linux s is hell command (bash command). In the offensive mode the program downloads
 an open-source application from the internet with the permission of the user namely aircrack-ng  (if not present
-in the user's system already ). Since it is written in python language, you must have python installed on your system for it to work.
+in the user's system already ). Since it is written in python language, you must have python installed on your system for it to work. Visit https://www.aircrack-ng.org for more info.
 
 If the user wants to secure his network by scanning for any attacker he can run the program. the program offers a simple command line interface
 which makes it easy for the new users.the user can directly access the defensive or offensive mode by inputing the respective command line
