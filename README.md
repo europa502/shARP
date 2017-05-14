@@ -54,3 +54,9 @@ bash ./shARP.sh -o [interface] to activate the program in offense mode.
 
 bash ./shARP.sh -h for help.
 
+# Note -
+
+1. I won't suggest using this software over wired connections, especially in offensive mode as it might cause network instability.
+2. Use the offensive mode only with the NICs that supports monitor mode.
+3. Offensive mode does DOS attack on the ARP-spoofer. So use Offensive mode only after making sure that you have appropriate right over the network and the devices connected to it and make sure that doing so is legal in your Country/State.
+
