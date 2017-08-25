@@ -36,7 +36,7 @@ ARP spoofing allows an attacker to intercept data frames on a network, modify th
 
 The program creates a log file (/usr/shARP/)containing the details of the attack such as the attackers mac address, mac vendor, time and date of the attack. 
 
-We can identify the NIC of the attackers system with the help of the obtained mac address. The whole program is designed specially for linux and is written in Linux shell command (bash command). In the offensive mode the program downloads an open-source application from with the permission of the user namely aircrack-ng (if not present in the user's system already). Since this is written in python language, you must have python installed on your system for it to work. Visit https://www.aircrack-ng.org for more info.
+We can identify the NIC of the attackers system with the help of the obtained mac address. The whole program is designed specially for linux and is written in Linux shell command (bash command). In the offensive mode the program downloads an open-source application from with the permission of the user namely aircrack-ng (if not present in the user's system already). Visit https://www.aircrack-ng.org for more info.
 
 # Edits-
 If you wish to get an audio alert please download **espeak** or **comment out those lines** in the source code.
