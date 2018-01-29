@@ -23,7 +23,7 @@ ARP spoofing allows an attacker to intercept data frames on a network, modify th
 
 
 
-*What's new ?**
+**What's new ?**
 
 shARP_2.0 can perform active scan as well as passive scans in both defensive and offensive modes.
 
@@ -36,25 +36,39 @@ shARP_2.0 can perform active scan as well as passive scans in both defensive and
 **Passive Scan** - Use when your system is busy transferring data through the network. Passive scan is efficient in for constant data transfering devices as your device and the network would be secured from ARP-spoofing incidents without compromising the speed or the network bandwidth.
 
 **Help**
-
+```bash
+bash ./shARP.sh -h
+```
 ![screenshot from 2017-05-14 21-24-35](https://cloud.githubusercontent.com/assets/26405791/26035852/2deac44c-38f1-11e7-9782-1b99456ae6a5.png)
 
 **Defensive mode with active scanning**
-
+```bash 
+bash ./shARP.sh -d -a wlan0
+```
 ![screenshot from 2017-05-14 21-25-30](https://cloud.githubusercontent.com/assets/26405791/26035891/c04506d6-38f1-11e7-8cbb-3a2a3a7cf500.png)
  
 
 **Defensive mode with Passive scanning**
 
+```bash
+bash ./shARP.sh -d -p wlan0
+
+```
+
 ![screenshot from 2017-05-14 21-26-24](https://cloud.githubusercontent.com/assets/26405791/26035897/d38c33ea-38f1-11e7-8bcf-68e5900f02d4.png)
 
 **Offensive mode with Active scan**
-
+```bash
+bash ./shARP.sh -o -a wlan0
+```
 ![screenshot from 2017-05-14 21-27-53](https://cloud.githubusercontent.com/assets/26405791/26035913/32030688-38f2-11e7-99c2-6cfc8cf41f9f.png)
 
 ![screenshot from 2017-05-14 21-28-47](https://cloud.githubusercontent.com/assets/26405791/26035922/41b40fbe-38f2-11e7-937d-c94e96bf6ccf.png)
 
 **Offensive mode with Passive scan**
+```bash
+bash ./shARP.sh -o -p wlan0
+```
 
 ![screenshot from 2017-05-14 21-29-45](https://cloud.githubusercontent.com/assets/26405791/26035927/48b349ec-38f2-11e7-843d-e564fdd4a129.png)
 
@@ -62,6 +76,11 @@ shARP_2.0 can perform active scan as well as passive scans in both defensive and
 
 
 **Reset Network Card** 
+```bash 
+bash ./shARP.sh -r wlan0
+```
+
+Reset your network card only when used with active mode or when the network adaptor doesn't work properly. Else you can switch back on your network connection manually.
 
 ![screenshot from 2017-05-14 21-25-53](https://cloud.githubusercontent.com/assets/26405791/26035935/6aa653be-38f2-11e7-93a4-eae4e22afbf9.png)
 
