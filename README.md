@@ -1,6 +1,31 @@
+
+                                          ||                               _______       _______          
+                                          ||                  /\          |        ?    |        ?     
+                                          ||                 /  \         |         ?   |         ?    
+                                          ||                /    \        |         ?   |         ?    
+                                    //    ||-------        /      \       |________?    |________?     
+                                   //     ||      ||      /--------\      |     \       |              
+                                  //_____ ||      ||     /          \     |      \      |              
+                                       // ||      ||    /            \    |       \     |             
+                                      //  ||      ||   /              \   |        \    |             
+                                     //   ||      ||  /                \  |         \   |             
+                        _______________________________________________________________________________________	  		   
+				       		                       
+ 
+
+
+
+# Description-
+
+ARP spoofing allows an attacker to intercept data frames on a network, modify the traffic, or stop all traffic. Often the attack is used as an opening for other attacks, such as denial of service, man in the middle, or session hijacking attacks. This anti- ARP spoofing program, (shARP) detects the presence of a third party in a private network actively. It has 2 mode: defensive and offensive. 
+
+**Releases** - [shARP_1.0](https://github.com/europa502/shARP/releases/tag/v1.0)
+
+
+
 *What's new ?**
 
-shARP 2.0 can perform active scan as well as passive scans in both defensive and offensive modes.
+shARP_2.0 can perform active scan as well as passive scans in both defensive and offensive modes.
 
 **Defensive mode** - Defensive mode protects the end user from the spoofer by disconnecting the user's system from the network. This mode also alerts the user by an audio message as soon as spoofing is detected. 
 
