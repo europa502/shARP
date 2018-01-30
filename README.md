@@ -21,13 +21,13 @@ ARP spoofing allows an attacker to intercept data frames on a network, modify th
 
 **Releases** - [shARP_1.0](https://github.com/europa502/shARP/releases/tag/v1.0)
 
-# prerequisites -
+# Prerequisites -
 
-Linux distro
-Python 2.17.x
-Aircrack-ng
-espeak (optional)
-Network card that supports monitor mode
+	-Linux distro
+	-Python 2.17.x
+	-Aircrack-ng
+	-espeak (optional)
+	-Network card that supports monitor mode
 
 **What's new ?**
 
@@ -91,7 +91,7 @@ Reset your network card only when used with active mode or when the network adap
 ![screenshot from 2017-05-14 21-25-53](https://cloud.githubusercontent.com/assets/26405791/26035935/6aa653be-38f2-11e7-93a4-eae4e22afbf9.png)
 
 
-# Records
+# Records-
 
 The program creates a log file in the folder /usr/shARP/ containing the details of the attack such as the attackers mac address, mac vendor, time and date of the attack. 
 
