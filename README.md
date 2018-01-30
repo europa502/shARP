@@ -1,15 +1,15 @@
 
-                                          ||                               _______       _______          
-                                          ||                  /\          |        ?    |        ?     
-                                          ||                 /  \         |         ?   |         ?    
-                                          ||                /    \        |         ?   |         ?    
-                                    //    ||-------        /      \       |________?    |________?     
-                                   //     ||      ||      /--------\      |     \       |              
-                                  //_____ ||      ||     /          \     |      \      |              
-                                       // ||      ||    /            \    |       \     |             
-                                      //  ||      ||   /              \   |        \    |             
-                                     //   ||      ||  /                \  |         \   |             
-                        _______________________________________________________________________________________	  		   
+                   ||                               _______       _______          
+                   ||                  /\          |        ?    |        ?     
+                   ||                 /  \         |         ?   |         ?    
+                   ||                /    \        |         ?   |         ?    
+             //    ||-------        /      \       |________?    |________?     
+            //     ||      ||      /--------\      |     \       |              
+           //_____ ||      ||     /          \     |      \      |              
+                // ||      ||    /            \    |       \     |             
+               //  ||      ||   /              \   |        \    |             
+              //   ||      ||  /                \  |         \   |             
+ ____________________________________________________________________________________	  		   
 				       		                       
  
 
@@ -21,7 +21,13 @@ ARP spoofing allows an attacker to intercept data frames on a network, modify th
 
 **Releases** - [shARP_1.0](https://github.com/europa502/shARP/releases/tag/v1.0)
 
+# prerequisites -
 
+Linux distro
+Python 2.17.x
+Aircrack-ng
+espeak (optional)
+Network card that supports monitor mode
 
 **What's new ?**
 
@@ -85,9 +91,19 @@ Reset your network card only when used with active mode or when the network adap
 ![screenshot from 2017-05-14 21-25-53](https://cloud.githubusercontent.com/assets/26405791/26035935/6aa653be-38f2-11e7-93a4-eae4e22afbf9.png)
 
 
-**Note -**
+# Records
+
+The program creates a log file in the folder /usr/shARP/ containing the details of the attack such as the attackers mac address, mac vendor, time and date of the attack. 
+
+One can identify the NIC of the attacker's system with the help of the obtained mac address. The whole program is designed specially for linux and is written in bash and python. In the offensive mode the program downloads an open-source application from with the permission of the user namely aircrack-ng (if not present in the user's system already). Visit https://www.aircrack-ng.org for more info.
+
+# Edits-
+If you wish to get an audio alert please download **espeak** or **comment out those lines** in the source code.
+
+
+# Note-
 
 1. I won't suggest using this software over wired connections, especially in offensive mode as it might cause network instability.
 2. Use the offensive mode only with the NICs that supports monitor mode.
-3. Offensive mode does DOS attack on the ARP-spoofer. So use Offensive mode only after making sure that you have appropriate right over the network and the devices connected to it and make sure that doing so is legal in your Country/State.
+3. Offensive mode does DOS attack on the ARP-spoofer. Use Offensive mode only after making sure that you have appropriate right(s) over the network and the device(s) connected to it and make sure that doing so is legal in your Country/State.
 
