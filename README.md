@@ -19,7 +19,7 @@
 
 ARP spoofing allows an attacker to intercept data frames on a network, modify the traffic, or stop all traffic. Often the attack is used as an opening for other attacks, such as denial of service, man in the middle, or session hijacking attacks. This anti- ARP spoofing program, (shARP) detects the presence of a third party in a private network actively. It has 2 mode: defensive and offensive. 
 
-**Releases** - [shARP_1.0](https://github.com/europa502/shARP/releases/tag/v1.0)
+**Previous Releases** - [shARP_1.0](https://github.com/europa502/shARP/releases/tag/v1.0)
 
 # Prerequisites -
 
