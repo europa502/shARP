@@ -27,7 +27,9 @@ ARP spoofing allows an attacker to intercept data frames on a network, modify th
 	-Python 2.7.x
 	-Aircrack-ng
 	-espeak (optional)
-	-Network card that supports monitor mode
+	-Network card that supports monitor mode and packet injection
+
+You can check if your linux wireless driver supports these functionalities from this [page](https://wireless.wiki.kernel.org/en/users/drivers) 
 
 **What's new ?**
 
@@ -106,4 +108,5 @@ If you wish to get an audio alert please download **espeak** or **comment out th
 1. I won't suggest using this software over wired connections, especially in offensive mode as it might cause network instability.
 2. Use the offensive mode only with the NICs that supports monitor mode.
 3. Offensive mode does DOS attack on the ARP-spoofer. Use Offensive mode only after making sure that you have appropriate right(s) over the network and the device(s) connected to it and make sure that doing so is legal in your Country/State.
+4. Offensive mode will not work if your wifi card/driver doesn't support packet injection.
 
