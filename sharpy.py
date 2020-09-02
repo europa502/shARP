@@ -1,12 +1,13 @@
 import netifaces
 import time
 import threading
-import os
+import sys, os
 from scapy.all import *
 from pyfiglet import Figlet
 import random
 import argparse
 import logging
+
 class startup():
     def __init__(self,OS='linux',mode='defensive',reset_da_iface=0,unlink_all_ifaces=0,iface=None, da_iface=None,command=None):
         self.iface=None
@@ -14,7 +15,7 @@ class startup():
         self.gateway_IP=None
         self.iface_MAC=None
         self.reset_da_iface=reset_da_iface
-        self.OS=OS.upper()
+        self.OS=OS.lower()
         self.mode=mode.upper()
         self.unlink_all_ifaces=unlink_all_ifaces
         self.command=command
@@ -86,7 +87,7 @@ class startup():
             print('No Problem',pkt['Ethernet'].src, pkt['Ethernet'].dst)
 
     def defensive_mode(self,unlink_all_ifaces=1,command=None):
-        if self.OS == 'LINUX':
+        if 'linux' in self.OS:
             if unlink_all_ifaces:
                 for network in netifaces.gateways()[2]:
                     os.system('sudo ip link set dev %s down'% network[1])
@@ -94,7 +95,7 @@ class startup():
             else:
                 os.system('sudo ip link set dev %s down'%self.iface)
                 logging.debug('running command - "ip link set dev %s down"' % self.iface)
-        elif self.OS == 'WINDOWS':
+        elif 'win' in self.OS:
             pass
         if command is not None:
             os.system(command)
@@ -102,7 +103,7 @@ class startup():
 
     def offensive_mode(self,da_iface=None):
         self.create_deauth_packets()
-        if self.OS=='linux':
+        if 'linux' in self.OS :
             print('Setting %s to monitor mode!'%da_iface)
             if not os.system('sudo ip link set dev %s down'%da_iface):
                 if not os.system('sudo iwconfig %s mode monitor'%da_iface):
@@ -147,7 +148,6 @@ if __name__== "__main__":
     parser.add_argument('-m', '--mode', type=str,default='defensive', help='Set response mode')
     parser.add_argument('-s', '--scan', type=str,default='passive', help='Set scanning method')
     parser.add_argument('-t', '--time_interval', type=int,default=1, help='Set scanning interval')
-    parser.add_argument('-o', '--OS', type=str, default='linux', help='Operating System')
     parser.add_argument('-i', '--net_iface', type=str, default=None, help='Network interface')
     parser.add_argument('-d', '--da_iface', type=str, default=None, help='Deauth interface')
     parser.add_argument('-u', '--unlink_all_ifaces', type=str, default='', help='Disconnect all interfaces connected to this network')
@@ -157,7 +157,7 @@ if __name__== "__main__":
     mode = parser.parse_args().mode
     unlink_all_ifaces = parser.parse_args().unlink_all_ifaces
     scan=parser.parse_args().scan
-    OS=parser.parse_args().OS
+    OS=sys.platform()
     interval= parser.parse_args().time_interval
     net_iface = parser.parse_args().net_iface
     da_iface= parser.parse_args().da_iface
